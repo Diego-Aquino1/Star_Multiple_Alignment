@@ -1,0 +1,34 @@
+Pairwise Scores Matrix:
+[[ 0.  7. -2.  0. -3.]
+ [ 7.  0. -2.  0. -4.]
+ [-2. -2.  0.  0. -7.]
+ [ 0.  0.  0.  0. -3.]
+ [-3. -4. -7. -3.  0.]]
+
+Alignments with Center Sequence:
+Alignment:
+ATTGCCATT
+ATTGCCATT
+
+Alignment:
+ATTGCCATT
+ATGGCCATT
+
+Alignment:
+ATTGCCA--TT
+A-TCCAATTTT
+
+Alignment:
+ATTGCCATT
+ATCTTC-TT
+
+Alignment:
+ATTGCCATT
+ACTG--ACC
+
+Multiple Alignment Result:
+ATTGCCATT--
+ATTGCCATT--
+ATTGCCA--TT
+ATTGCCATT--
+ATTGCCATT--

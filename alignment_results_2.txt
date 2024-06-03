@@ -1,0 +1,27 @@
+Execution time to calculate score matrix: 0.003002
+Best score: 2
+Matrix with all the scores from the alignments:
+0	7	-2	0	-3
+7	0	-2	0	-4
+-2	-2	0	0	-7
+0	0	0	0	-3
+-3	-4	-7	-3	0
+Alignments with star sequence:
+Alignment S0 - S1
+ATTGCCATT
+ATGGCCATT
+Alignment S0 - S2
+ATTGCCATT--
+ATC-CAATTTT
+Alignment S0 - S3
+ATTGCCATT
+ATCTTC-TT
+Alignment S0 - S4
+ATTGCCATT
+ACTGACC--
+Multiple Alignment:
+ATTGCCATT--
+ATGGCCATT--
+ATC-CAATTTT
+ATCTTC-TT--
+ACTGACC----
