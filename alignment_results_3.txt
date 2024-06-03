@@ -1,0 +1,35 @@
+Execution time: 0.035636
+Best score: -30
+
+Matrix with all the scores from the alignments:
+0	-8	-3	-8	-6	-7
+-8	0	-13	-4	-10	-10
+-3	-13	0	-8	-5	-4
+-8	-4	-8	0	-9	-7
+-6	-10	-5	-9	0	-2
+-7	-10	-4	-7	-2	0
+
+Alignments with star sequence:
+Alignment S6 - S1
+ggctgcatgcttagtgca-ct
+at-taaaggtttataccttcc
+Alignment S6 - S2
+g-gctg-catgcttagtgcact
+caggtaacaaaccaacca-ac-
+Alignment S6 - S3
+ggctgcatg-cttagtgca-ct
+tttcg-atctctt-gtagatct
+Alignment S6 - S4
+gg-ctgcatgcttagtgcact
+gttctctaaacgaactttaa-
+Alignment S6 - S5
+gg-ctgcatgcttagtgcact-
+aatctgtgtggct-gt-cactc
+
+Multiple Alignment:
+at-taaaggtttataccttcc-
+caggtaacaaaccaacca-ac-
+tttcg-atctctt-gtagatct
+gttctctaaacgaactttaa--
+aatctgtgtggct-gt-cactc
+ggctgcatgcttagtgcact--

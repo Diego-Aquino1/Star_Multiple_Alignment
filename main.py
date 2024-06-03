@@ -10,17 +10,17 @@ def remove_spaces(sequence):
 
 def generate_file(matrix, alignments, multiple, star, filename, time):
     with open(filename, 'w') as file:
-        file.write(f"Execution time to calculate score matrix: {time}\n")
+        file.write(f"Execution time: {time}\n")
         file.write(f"Best score: {star[1]}\n")
-        file.write("Matrix with all the scores from the alignments:\n")
+        file.write("\nMatrix with all the scores from the alignments:\n")
         for row in matrix:
             file.write("\t".join(map(str, row)) + "\n")
-        file.write("Alignments with star sequence:\n")
+        file.write("\nAlignments with star sequence:\n")
         for i, alignment in enumerate(alignments):
-            file.write(f"Alignment S{star[0]} - S{i+1}\n")
+            file.write(f"Alignment S{star[0] + 1} - S{i+1}\n")
             file.write(f"{alignment[0]}\n")
             file.write(f"{alignment[1]}\n")
-        file.write("Multiple Alignment:\n")
+        file.write("\nMultiple Alignment:\n")
         for seq in multiple:
             file.write(f"{seq}\n")
         print(f"Results saved to {filename}")
@@ -97,7 +97,14 @@ def calculate_max_score(num_seq, sequences):
         if sum_scores > max_score:
             max_score = sum_scores
             star = i
-    return star, max_score, all_scores, max_score
+
+    row_sums = np.sum(all_scores, axis=1)
+
+    max_row_position = np.argmax(row_sums)
+
+    max_sum = np.max(row_sums)
+    
+    return max_row_position, max_score, all_scores, max_sum
 
 
 # def star_alignment(num_seq, sequences):
@@ -171,13 +178,14 @@ def star_alignment(num_seq, sequences):
 
 def main():
     sequences = [
-        "ATTGCCATT",
-        "ATGGCCATT",
-        "ATCCAATTTT",
-        "ATCTTCTT",
-        "ACTGACC"
+        "attaaaggtttataccttcc",
+        "caggtaacaaaccaaccaac",
+        "tttcgatctcttgtagatct",
+        "gttctctaaacgaactttaa",
+        "aatctgtgtggctgtcactc",
+        "ggctgcatgcttagtgcact"
     ]
-    filename = "alignment_results_2.txt"
+    filename = "alignment_results_3.txt"
 
     start_time = datetime.now()
     multiple_alignment, alignments, star, all_scores, max_score = star_alignment(len(sequences), sequences)
